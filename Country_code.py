@@ -550,7 +550,7 @@ if start_game == True or st.session_state.start_game_state == True:
 
         if st.session_state.add_to_avg == True:
             f = open("list_of_scores.txt", "a")
-            f.write("\n")
+            #f.write("\n")
             f.write(percent_score_str)
             f.close()
             st.session_state.add_to_avg = False
