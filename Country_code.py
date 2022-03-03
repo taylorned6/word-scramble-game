@@ -536,7 +536,8 @@ if start_game == True or st.session_state.start_game_state == True:
         all_scores = 0
 
         for line in f: #Loops through attached text file, computes total scores and number of entries to compute average
-            all_scores += int(line)
+            score = int(line)
+            all_scores = all_scores + score
             num_score_entries += 1
 
         f.close()
@@ -554,6 +555,7 @@ if start_game == True or st.session_state.start_game_state == True:
             f.close()
             st.session_state.add_to_avg = False
         st.write("Refresh to play again")
+        
         #restart_button = st.button("Play Again")
         #if restart_button:
         #    st.legacy_caching.clear_cache() #Clears session state
