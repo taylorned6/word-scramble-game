@@ -557,4 +557,4 @@ if start_game == True or st.session_state.start_game_state == True:
         restart_button = st.button("Play Again")
         if restart_button:
             st.legacy_caching.clear_cache() #Clears session state
-            st.experimental_rerun
+            st.experimental_rerun()
