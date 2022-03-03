@@ -553,8 +553,8 @@ if start_game == True or st.session_state.start_game_state == True:
             f.write(percent_score_str)
             f.close()
             st.session_state.add_to_avg = False
-
-        restart_button = st.button("Play Again")
-        if restart_button:
-            st.legacy_caching.clear_cache() #Clears session state
-            st.experimental_rerun()
+        st.write("Refresh to play again")
+        #restart_button = st.button("Play Again")
+        #if restart_button:
+        #    st.legacy_caching.clear_cache() #Clears session state
+        #    st.experimental_rerun()
