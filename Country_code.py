@@ -521,7 +521,7 @@ if start_game == True or st.session_state.start_game_state == True:
     
         count = 0
         for i in range(num_countries): #Computes how many countries the user got correct
-            if answers_lst[i] in countries_lst_chosen:
+            if answers_lst[i].lower() in countries_lst_chosen:
                 count += 1
 
         count_str = str(count)
