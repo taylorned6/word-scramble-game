@@ -3,7 +3,6 @@ import random
 import streamlit as st
 import time
 from streamlit import caching
-import pyautogui
 
 
 st.set_page_config(layout="wide")
@@ -558,4 +557,4 @@ if start_game == True or st.session_state.start_game_state == True:
         restart_button = st.button("Play Again")
         if restart_button:
             st.legacy_caching.clear_cache() #Clears session state
-            pyautogui.hotkey("ctrl","F5") #Restarts webpage
+            st.experimental_rerun
