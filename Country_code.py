@@ -530,6 +530,7 @@ if start_game == True or st.session_state.start_game_state == True:
         percent_score_str = str(percent_score)
         output = 'You got: ' + count_str + ' out of ' + num_countries_string + ' (' + percent_score_str + '%)'
         st.header(output)
+        
 
         f = open('list_of_scores.txt')
         num_score_entries=0
@@ -554,6 +555,19 @@ if start_game == True or st.session_state.start_game_state == True:
             f.write(percent_score_str +'\n')
             f.close()
             st.session_state.add_to_avg = False
+           
+        if percent_score >= 90:
+            st.write("God tier")
+        elif percent_score >= 80:
+            st.write("Guru")
+        elif percent_score >= 70:
+            st.write("Chill score")
+        elif percent_score >= 60:
+            st.write("Trash")
+        else:
+            st.write("Awful")
+            
+            
         st.write("Refresh to play again")
         
         #restart_button = st.button("Play Again")
